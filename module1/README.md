@@ -30,13 +30,13 @@ Used Python 3 for the core logic and the Flask library to implement the REST
 API. For unittests the standard Python unittest mdoule was chosen. Kafka was 
 not used.
 
-The code is structured as a module (`alerts`) that provides a single class 
+The code is structured as a module (`alerts.py`) that provides a single class 
 (`AlertService`) with a single method to be used externally (`alert_me()`).
 The utilization limits are taken in as constructor arguments and cannot be 
 subsequently changed so the `AlertService` object works with the same limits 
 for its entire lifetime.
 
-The CLI is implemented externally to the package in `cli`.
+The CLI is implemented externally to the package in `alerts_cli.py`.
 
 The REST API (`alerts_rest_api.py`) is very simple Flask app with a single 
 method that handles post requests that should include the tuples as raw data. 
@@ -76,7 +76,7 @@ it receives as input
 For the command line interface:
 
 ```
-./cli_client.py [--cpu=<cpu_limit>] [--mem=<mem_limit>] [--disk=<disk_limit>] 
+./alerts_cli.py [--cpu=<cpu_limit>] [--mem=<mem_limit>] [--disk=<disk_limit>] 
 [ < inputfile ]
 ```
 
