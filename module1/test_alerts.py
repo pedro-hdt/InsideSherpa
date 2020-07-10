@@ -1,3 +1,10 @@
+"""
+JPMC Virtual SEP - InsideSherpa - Module 1
+Pedro Teixeira - O734271
+
+Unit tests for the alerts module
+"""
+
 import unittest
 from alerts import AlertService
 
@@ -7,7 +14,7 @@ class TestAlertService(unittest.TestCase):
 
     * Uses both positive and negative test cases
     * Focus on testing the parsing separated from the validation to benefit 
-    from the granularity since the exercise is small enough tha we can afford 
+    from the granularity since the exercise is small enough that we can afford 
     it.
     """
 
@@ -98,5 +105,10 @@ class TestAlertService(unittest.TestCase):
         self.assertEqual(f"({AlertService.ALERT}, 1234, " \
             f"{AlertService.RULE_CPU}, {AlertService.RULE_MEM}, {AlertService.RULE_DSK})", out)
 
-    # Negative test cases for the validation function =========================
+    def test_validation_negative_values(self):
+        out = self.alert_service._validate("1234",-1,-1,-1)
+        self.assertEqual(f"({AlertService.NO_ALERT}, 1234)", out)
+
+    # No negative testcases for the validation function
+
 
