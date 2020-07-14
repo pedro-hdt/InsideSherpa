@@ -29,22 +29,22 @@ def allowed_file(filename):
 @app.route('/', methods=['POST'])
 def add_list():
     if 'list' not in request.files:
-        return "Error: no 'list' file provided"
+        return "Error: no 'list' file provided", 400
     list_sanctions = request.files['list']
     if list_sanctions.filename == '':
-        return "Error: empty filename"
+        return "Error: empty filename", 400
     if list_sanctions and allowed_file(list_sanctions.filename):
         filename = secure_filename(list_sanctions.filename)
         list_sanctions.save(os.path.join(
             app.config['UPLOAD_FOLDER'], filename))
-    return "List added successfully!"
+    return "List added successfully!", 200
 
 
 @app.route('/<list_name>/<search_name>', methods=['GET'])
 def screen(list_name, search_name):
     list_path = os.path.join(app.config['UPLOAD_FOLDER'], list_name)
     results = screen_name(search_name, list_path)
-    return '\n'.join(map(lambda x: f"{x[1]} {x[0]}", results)
+    return '\n'.join(map(lambda x: f"{x[1]} {x[0]}", results)), 200
 
 
 app.run()

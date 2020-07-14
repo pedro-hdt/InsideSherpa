@@ -20,7 +20,8 @@ To get the endpoint running on a dev server simply create a 'lists' directory an
 The API supports:
 
 - POST method on the root '/' to upload sanctions lists, which must have
-  either .txt or .csv extensions
+  either .txt or .csv extensions. The file should be included as form data under the key
+  'list'
 - GET method to '/list/search_name' where 'list' is
   the list to check against and 'search_name' is the name to screen.
 
