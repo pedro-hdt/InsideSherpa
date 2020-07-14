@@ -4,9 +4,9 @@
 
 Please see the Jupyter notebook (`sanctions.ipynb`) for a description and
 walkthrough of the solution. For a better experience of visualizing the notebook,
-there is a version hosted on Google Colab: https://drive.google.com/drive/folders/1-2QLVZ4v0_wO1FiPfom6mOWNlJ5ESQgB?usp=sharing
+there is a version hosted on Google Colab: https://colab.research.google.com/drive/1wX1sUxXEORZ7S7llPrwXQ4h8kW64HKvc?usp=sharing
 
-All the code in there is also in separate files.
+Most code in there is also in this repo.
 
 The REST API is not in the notebook.
 
