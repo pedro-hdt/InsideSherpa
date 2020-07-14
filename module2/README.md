@@ -4,7 +4,7 @@
 
 Please see the Jupyter notebook (`sanctions.ipynb`) for a description and
 walkthrough of the solution. For a better experience of visualizing the notebook,
-there is a version hosted on Google Colab: https://colab.research.google.com/drive/1_GvT0bTV5wkOQjT9eZRH51kxuNFXP7zY?usp=sharing
+there is a version hosted on Google Colab: https://drive.google.com/drive/folders/1-2QLVZ4v0_wO1FiPfom6mOWNlJ5ESQgB?usp=sharing
 
 All the code in there is also in separate files.
 
