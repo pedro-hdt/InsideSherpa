@@ -1,4 +1,4 @@
-# JPMC Summer Internship SEP: InsideSherpa Module 1
+# Module 1
 ## Real Time Alerting
 
 ### Task
